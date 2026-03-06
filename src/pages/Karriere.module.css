@@ -1,0 +1,48 @@
+.jobs {
+  display: flex; flex-direction: column; gap: 16px;
+  margin: 32px 0 48px;
+}
+
+.job {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 32px;
+  padding: 28px 32px;
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.job:hover {
+  border-color: rgba(0,0,0,0.15);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+}
+
+.jobLeft { display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.dept {
+  font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--clr-accent); margin-bottom: 2px;
+}
+.jobTitle {
+  font-family: var(--font-sans);
+  font-size: 17px; font-weight: 700; color: var(--clr-heading);
+  letter-spacing: -0.3px; line-height: 1.3;
+}
+.jobType { font-size: 13px; color: var(--clr-muted); }
+.jobDesc { font-size: 14px; color: var(--clr-muted); line-height: 1.7; max-width: 560px; }
+
+.apply {
+  flex-shrink: 0;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 10px 20px;
+  background: var(--clr-accent); color: #fff;
+  font-size: 13px; font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition), transform var(--transition);
+  white-space: nowrap;
+}
+.apply:hover { background: #ff5a1f; transform: translateY(-1px); }
+
+@media (max-width: 640px) {
+  .job { flex-direction: column; }
+  .apply { align-self: flex-start; }
+}

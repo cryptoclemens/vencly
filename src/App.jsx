@@ -7,6 +7,9 @@ import Projekte from './pages/Projekte'
 import ProjectDetail from './pages/ProjectDetail'
 import Impressum from './pages/Impressum'
 import Datenschutz from './pages/Datenschutz'
+import UeberUns from './pages/UeberUns'
+import Blog from './pages/Blog'
+import Karriere from './pages/Karriere'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -26,6 +29,9 @@ export default function App() {
           <Route path="/projekte/:slug" element={<ProjectDetail />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
+          <Route path="/ueber-uns" element={<UeberUns />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/karriere" element={<Karriere />} />
         </Routes>
       </main>
       <Footer />
