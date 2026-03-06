@@ -26,7 +26,7 @@
   font-family: var(--font-sans);
   font-size: clamp(36px, 5vw, 64px);
   font-weight: 800; letter-spacing: -1.5px;
-  color: var(--clr-white); line-height: 1.08;
+  color: var(--clr-heading); line-height: 1.08;
   margin-bottom: 18px; position: relative; z-index: 1;
 }
 .heroSub {
@@ -44,12 +44,13 @@
   display: grid; grid-template-columns: 1fr;
   min-height: 380px;
   border-radius: var(--radius-xl);
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid var(--clr-border);
   margin-bottom: 24px;
   text-decoration: none;
-  transition: transform var(--transition), border-color var(--transition);
+  background: var(--clr-surface);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
-.featured:hover { transform: translateY(-3px); border-color: rgba(255,255,255,0.2); }
+.featured:hover { transform: translateY(-3px); border-color: rgba(0,0,0,0.15); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
 .featuredBg {
   position: absolute; inset: 0; opacity: 0.12;
   transition: opacity var(--transition);
@@ -65,20 +66,20 @@
 .featuredTitle {
   font-family: var(--font-sans);
   font-size: clamp(28px, 3.5vw, 44px);
-  font-weight: 800; color: var(--clr-white);
+  font-weight: 800; color: var(--clr-heading);
   letter-spacing: -1px; line-height: 1.1;
 }
 .featuredDesc { font-size: 16px; color: var(--clr-muted); max-width: 620px; line-height: 1.75; }
 .featuredCta {
   display: inline-flex; align-items: center; gap: 8px;
   margin-top: 8px;
-  font-size: 14px; font-weight: 600; color: var(--clr-white);
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  font-size: 14px; font-weight: 600; color: var(--clr-accent);
+  border-bottom: 1px solid rgba(255,107,53,0.3);
   padding-bottom: 2px;
   width: fit-content;
   transition: gap var(--transition), border-color var(--transition);
 }
-.featured:hover .featuredCta { gap: 12px; border-color: rgba(255,255,255,0.5); }
+.featured:hover .featuredCta { gap: 12px; border-color: var(--clr-accent); }
 
 /* Cards */
 .cards {
@@ -95,7 +96,7 @@
   display: flex; flex-direction: column; gap: 10px;
   transition: border-color var(--transition), transform var(--transition);
 }
-.card:hover { border-color: rgba(255,255,255,0.15); transform: translateY(-3px); }
+.card:hover { border-color: rgba(0,0,0,0.15); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
 .card:hover .cardGlow { opacity: 1; }
 .cardGlow {
   position: absolute; inset: 0; pointer-events: none;
@@ -105,7 +106,7 @@
 .cardIcon { font-size: 36px; margin: 4px 0; }
 .cardTitle {
   font-family: var(--font-sans);
-  font-size: 20px; font-weight: 800; color: var(--clr-white); letter-spacing: -0.5px;
+  font-size: 20px; font-weight: 800; color: var(--clr-heading); letter-spacing: -0.5px;
 }
 .cardSubtitle { font-size: 12px; font-weight: 500; color: var(--clr-muted); }
 .cardDesc { font-size: 13.5px; color: var(--clr-muted); line-height: 1.7; flex: 1; }

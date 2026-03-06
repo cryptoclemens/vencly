@@ -4,7 +4,7 @@
   padding-top: 68px;
   min-height: 60vh; display: flex; align-items: center;
 }
-.notFound h1 { font-size: 28px; font-weight: 700; color: var(--clr-white); margin-bottom: 16px; }
+.notFound h1 { font-size: 28px; font-weight: 700; color: var(--clr-heading); margin-bottom: 16px; }
 .back { color: var(--clr-accent); font-size: 15px; }
 
 /* ── HERO ── */
@@ -24,7 +24,7 @@
   transition: color var(--transition);
   position: relative; z-index: 1;
 }
-.backLink:hover { color: var(--clr-white); }
+.backLink:hover { color: var(--clr-heading); }
 
 .heroMeta {
   display: flex; align-items: center; gap: 14px;
@@ -58,7 +58,7 @@
   font-family: var(--font-sans);
   font-size: clamp(32px, 5vw, 60px);
   font-weight: 800; letter-spacing: -1.5px;
-  color: var(--clr-white); line-height: 1.06;
+  color: var(--clr-heading); line-height: 1.06;
   margin-bottom: 14px; position: relative; z-index: 1;
 }
 .heroSub {
@@ -118,7 +118,7 @@
 }
 .moreTitle {
   font-family: var(--font-sans);
-  font-size: 22px; font-weight: 800; color: var(--clr-white);
+  font-size: 22px; font-weight: 800; color: var(--clr-heading);
   margin-bottom: 28px; letter-spacing: -0.5px;
 }
 .moreGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -132,7 +132,7 @@
   text-decoration: none;
   transition: border-color var(--transition), transform var(--transition);
 }
-.moreCard:hover { border-color: rgba(255,255,255,0.15); transform: translateY(-2px); }
+.moreCard:hover { border-color: rgba(0,0,0,0.15); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
 .moreCard:hover .moreCardGlow { opacity: 1; }
 .moreCardGlow {
   position: absolute; inset: 0; pointer-events: none;
@@ -140,13 +140,13 @@
 }
 .moreIcon { font-size: 28px; flex-shrink: 0; position: relative; z-index: 1; }
 .moreCard > div { flex: 1; position: relative; z-index: 1; }
-.moreCardTitle { display: block; font-size: 14px; font-weight: 700; color: var(--clr-white); margin-bottom: 3px; }
+.moreCardTitle { display: block; font-size: 14px; font-weight: 700; color: var(--clr-heading); margin-bottom: 3px; }
 .moreCardSub { font-size: 12px; color: var(--clr-muted); line-height: 1.5; }
 .moreArrow {
   color: var(--clr-muted); flex-shrink: 0; position: relative; z-index: 1;
   transition: color var(--transition), transform var(--transition);
 }
-.moreCard:hover .moreArrow { color: var(--clr-white); transform: translateX(3px); }
+.moreCard:hover .moreArrow { color: var(--clr-heading); transform: translateX(3px); }
 
 @media (max-width: 900px) {
   .bodyLayout { grid-template-columns: 1fr; }
