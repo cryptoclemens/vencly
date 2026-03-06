@@ -34,8 +34,9 @@ export default function Nav() {
             <span className={styles.langDivider}>/</span>
             <span className={lang === 'en' ? styles.langActive : ''}>EN</span>
           </button>
-          <a href="#demo" className={styles.btnSecondary}>{t.nav.login}</a>
-          <a href="#demo" className={styles.btnPrimary}>
+          <a href="https://www.optainum.com" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>{t.nav.login}</a>
+          <span className={styles.version}>v1.2</span>
+          <a href="https://outlook.office.com/bookwithme/user/9c11749d74b349809103953c39ba26d4@vencly.com?anonymous&ep=pcard" target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
             <span>{t.nav.demo}</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
@@ -55,7 +56,7 @@ export default function Nav() {
             <span className={styles.langDivider}>/</span>
             <span className={lang === 'en' ? styles.langActive : ''}>EN</span>
           </button>
-          <a href="#demo" className={styles.btnPrimary}><span>{t.nav.demo}</span></a>
+          <a href="https://outlook.office.com/bookwithme/user/9c11749d74b349809103953c39ba26d4@vencly.com?anonymous&ep=pcard" target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}><span>{t.nav.demo}</span></a>
         </div>
       </div>
     </header>

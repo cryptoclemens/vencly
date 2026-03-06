@@ -66,6 +66,28 @@ Das Modell wurde auf Tausenden von erfolgreichen Venture-Clienting-Projekten tra
     icon: '🤖',
   },
   {
+    slug: 'optainum',
+    title: 'OptAInum',
+    subtitle: 'KI-Basiswissen gratis – für jeden zugänglich',
+    tag: 'KI-Plattform',
+    tagColor: '#8B5CF6',
+    status: 'Live',
+    statusColor: '#10B981',
+    year: '2025',
+    description: `OptAInum macht KI-Grundwissen für alle zugänglich. Die kostenlose Plattform bietet strukturierte Lernpfade, praktische Übungen und aktuelle Use Cases – damit jeder die Grundlagen der künstlichen Intelligenz verstehen und anwenden kann.`,
+    longDesc: `OptAInum entstand aus der Überzeugung, dass KI-Kompetenz kein Privileg für Tech-Experten sein sollte. Die Plattform richtet sich an Einsteiger, Fachkräfte aus dem Mittelstand und Innovationsverantwortliche, die die Potenziale von KI in ihrem Alltag nutzen wollen.
+
+Das Curriculum umfasst interaktive Module zu den Grundlagen von KI und Machine Learning, praxisnahe Tutorials zu Prompt Engineering und generativer KI sowie branchenspezifische Use Cases, die direkt auf Unternehmensszenarien zugeschnitten sind. OptAInum ist nahtlos mit dem Vencly-Ökosystem verbunden und bereitet Nutzer optimal auf die Arbeit mit KI-Agenten vor.`,
+    highlights: [
+      'Kostenloser Zugang zu KI-Grundlagenwissen',
+      'Interaktive Lernpfade für Einsteiger und Fortgeschrittene',
+      'Praxisnahe Prompt-Engineering-Übungen',
+      'Direkt verknüpft mit der Vencly-Plattform',
+    ],
+    gradient: 'linear-gradient(135deg, #8B5CF6, #6366F1)',
+    icon: '🧠',
+  },
+  {
     slug: 'compliance-engine',
     title: 'Compliance Engine',
     subtitle: 'Automatisierte Vergabeprüfung nach UVgO & DSGVO',

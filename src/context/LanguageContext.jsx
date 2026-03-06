@@ -4,7 +4,7 @@ const LanguageContext = createContext()
 
 export const translations = {
   de: {
-    nav: { home: 'Home', projects: 'Projekte', events: 'Events', contact: 'Kontakt', login: 'Log in', demo: 'Demo buchen' },
+    nav: { home: 'Home', projects: 'Projekte', events: 'Events', contact: 'Kontakt', login: 'Free AI basics: OptAInum', demo: 'Demo buchen' },
     hero: {
       badge: 'KI-Agenten Plattform · Live',
       label: 'Venture Clienting:',
@@ -29,7 +29,7 @@ export const translations = {
     footer: { tagline: 'Venture Clienting.\nJetzt. Skalierbar. Intelligent.', copy: '© {year} Venclÿ GmbH. Alle Rechte vorbehalten.' },
   },
   en: {
-    nav: { home: 'Home', projects: 'Projects', events: 'Events', contact: 'Contact', login: 'Log in', demo: 'Book Demo' },
+    nav: { home: 'Home', projects: 'Projects', events: 'Events', contact: 'Contact', login: 'Free AI basics: OptAInum', demo: 'Book Demo' },
     hero: {
       badge: 'AI Agents Platform · Live',
       label: 'Venture Clienting:',

@@ -233,18 +233,18 @@ export default function Home() {
               <span className={styles.teaserArrow}>→</span>
             </Link>
             <div className={styles.teaserSmall}>
+              <Link to="/projekte/optainum" className={styles.teaserCard}>
+                <div className={styles.teaserCardGlow} style={{'--tc':'#8B5CF6'}}/>
+                <span className={styles.teaserTag}>{lang==='de'?'KI-Plattform':'AI Platform'}</span>
+                <h3>OptAInum</h3>
+                <p>{lang==='de'?'Kostenloser Zugang zu KI-Grundlagenwissen für alle.':'Free access to AI basics for everyone.'}</p>
+                <span className={styles.teaserArrow}>→</span>
+              </Link>
               <Link to="/projekte/venture-scout" className={styles.teaserCard}>
                 <div className={styles.teaserCardGlow} style={{'--tc':'#FF6B35'}}/>
                 <span className={styles.teaserTag}>{lang==='de'?'KI-Tool':'AI Tool'}</span>
                 <h3>Venture Scout</h3>
                 <p>{lang==='de'?'Automatisches Startup-Scouting mit KI.':'Automatic startup scouting with AI.'}</p>
-                <span className={styles.teaserArrow}>→</span>
-              </Link>
-              <Link to="/projekte/ki-matchmaker" className={styles.teaserCard}>
-                <div className={styles.teaserCardGlow} style={{'--tc':'#06B6D4'}}/>
-                <span className={styles.teaserTag}>Beta</span>
-                <h3>KI Matchmaker</h3>
-                <p>{lang==='de'?'Intelligentes Matching zwischen Bedarf und Lösung.':'Intelligent matching between need and solution.'}</p>
                 <span className={styles.teaserArrow}>→</span>
               </Link>
             </div>
