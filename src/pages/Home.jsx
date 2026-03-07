@@ -74,6 +74,21 @@ const MvgLogo = () => (
 export default function Home() {
   const { lang, t } = useLang()
   const faq = lang === 'de' ? FAQ_DE : FAQ_EN
+  const phrases = lang === 'de' ? PHRASES_DE : PHRASES_EN
+
+  // Spotlight: cycles activeChip index, starts after all chips have entered
+  const [activeChip, setActiveChip] = useState(-1)
+  useEffect(() => {
+    setActiveChip(-1)
+    let interval
+    const start = setTimeout(() => {
+      setActiveChip(0)
+      interval = setInterval(() => {
+        setActiveChip(prev => (prev + 1) % phrases.length)
+      }, 1500)
+    }, 1900) // wait for staggered enter to finish
+    return () => { clearTimeout(start); clearInterval(interval) }
+  }, [lang])
   const features = [
     { icon: '💡', title: lang==='de'?'Bezahlbare Innovation':'Affordable Innovation', sub: lang==='de'?'Auch ohne eigene Abteilung':'Even without a department', desc: lang==='de'?'KMUs erhalten Zugang zu einem skalierbaren, digitalen Innovation Hub, ohne Fixkosten oder Personalbindung.':'SMEs get access to a scalable digital innovation hub without fixed costs or staff commitment.', accent: '#FF6B35' },
     { icon: '⚡', title: lang==='de'?'Bis zu 70% Entlastung':'Up to 70% relief', sub: lang==='de'?'Automatisierte Prozesse':'Automated processes', desc: lang==='de'?'Recherche, Matching, Dokumentation & Projektsteuerung – alles automatisiert durch smarte KI-Agenten.':'Research, matching, documentation & control – all automated by smart AI agents.', accent: '#6366F1' },
@@ -94,8 +109,11 @@ export default function Home() {
           <div className={styles.heroBadge}><span className={styles.badgeDot}/>{t.hero.badge}</div>
           <h1 className={styles.heroH1}>{t.hero.label}</h1>
           <div className={styles.heroQuotes}>
-            {(lang === 'de' ? PHRASES_DE : PHRASES_EN).map((phrase, i) => (
-              <span key={i} className={styles.heroQuote}>{phrase}</span>
+            {phrases.map((phrase, i) => (
+              <span
+                key={`${lang}-${i}`}
+                className={`${styles.heroQuote}${i === activeChip ? ` ${styles.heroQuoteActive}` : ''}`}
+              >{phrase}</span>
             ))}
           </div>
           <p className={styles.heroSub}>{t.hero.sub}</p>

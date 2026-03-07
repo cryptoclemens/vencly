@@ -27,15 +27,15 @@
 }
 .heroQuote {
   display: inline-flex; align-items: center; gap: 7px;
-  padding: 6px 14px;
-  border-radius: 100px;
-  background: rgba(99,102,241,0.07);
-  border: 1px solid rgba(99,102,241,0.2);
-  font-size: 12.5px; font-weight: 600;
-  color: #5153bf;
-  letter-spacing: 0.1px; white-space: nowrap;
-  transition: background 0.2s, border-color 0.2s, transform 0.2s;
-  cursor: default;
+  padding: 6px 14px; border-radius: 100px;
+  background: rgba(99,102,241,0.07); border: 1px solid rgba(99,102,241,0.2);
+  font-size: 12.5px; font-weight: 600; color: #6568C4;
+  letter-spacing: 0.1px; white-space: nowrap; cursor: default;
+  opacity: 0.65;
+  /* enter: backwards = holds "from" during delay, reverts to CSS value after → lets JS take over */
+  animation: chipEnter 0.5s ease-out backwards;
+  transition: opacity 0.45s ease, background 0.45s ease, border-color 0.45s ease,
+              box-shadow 0.45s ease, transform 0.3s ease, color 0.45s ease;
 }
 .heroQuote::before {
   content: ''; display: block;
@@ -43,10 +43,26 @@
   background: linear-gradient(135deg, #6366F1, #FF6B35);
   flex-shrink: 0;
 }
-.heroQuote:hover {
-  background: rgba(99,102,241,0.12);
-  border-color: rgba(99,102,241,0.35);
-  transform: translateY(-1px);
+/* JS adds this class to spotlight one chip at a time */
+.heroQuoteActive {
+  opacity: 1;
+  background: rgba(99,102,241,0.13);
+  border-color: rgba(99,102,241,0.42);
+  color: #3D40B0;
+  box-shadow: 0 3px 14px rgba(99,102,241,0.2);
+  transform: translateY(-1.5px);
+}
+.heroQuote:hover { opacity: 1; }
+/* staggered enter delays */
+.heroQuote:nth-child(1) { animation-delay: 0.30s; }
+.heroQuote:nth-child(2) { animation-delay: 0.45s; }
+.heroQuote:nth-child(3) { animation-delay: 0.60s; }
+.heroQuote:nth-child(4) { animation-delay: 0.75s; }
+.heroQuote:nth-child(5) { animation-delay: 0.90s; }
+.heroQuote:nth-child(6) { animation-delay: 1.05s; }
+@keyframes chipEnter {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 0.65; transform: none; }
 }
 
 .heroSub { font-size: clamp(15px, 1.8vw, 18px); color: var(--clr-muted); max-width: 540px; line-height: 1.75; }
