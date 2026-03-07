@@ -2,21 +2,27 @@ export const projects = [
   {
     slug: 'innovation-republic',
     title: 'Innovation Republic',
-    subtitle: 'Die führende Community für Venture Clienting in Deutschland',
-    tag: 'Flaggschiff-Projekt',
+    subtitle: 'Aufträge statt Fördergeld – marktbasierte Innovationsförderung 2.0',
+    tag: 'Gemeinnützig · Live',
     tagColor: '#6366F1',
     status: 'Live',
     statusColor: '#10B981',
-    year: '2023',
-    description: `Innovation Republic ist die aktivste Community für Venture Clienting im deutschsprachigen Raum. Wir verbinden Innovationsverantwortliche aus DAX-Konzernen und Mittelstand mit den besten Startups Europas.`,
-    longDesc: `Innovation Republic entstand aus der Erkenntnis, dass Venture Clienting in Deutschland noch zu wenig bekannt ist – obwohl es eine der effektivsten Methoden ist, um Corporate Innovation zu betreiben.
+    year: '2024',
+    website: 'https://www.innovation-republic.de',
+    description: `Innovation Republic ist eine gemeinnützige Plattform, die Unternehmen, Startups und öffentliche Träger über reale Aufträge statt Fördermittel zusammenbringt – digital, einkaufskonform und kostenfrei für Auftraggeber. Mehr auf <a href="https://www.innovation-republic.de" target="_blank" rel="noopener noreferrer" style="color:var(--clr-accent2);text-decoration:underline">www.innovation-republic.de</a>`,
+    longDesc: `Deutschlands Mittelstand hat Ideen – aber zu wenig Umsetzung. Viele Unternehmen und öffentliche Träger scheitern am fehlenden Zugang zu passenden Startups, an langen Entscheidungsprozessen und an Fördergeldern, die an Bürokratie versanden. Gleichzeitig suchen tausende Startups nach realen Aufträgen, um ihre Lösungen in den Markt zu bringen.
 
-Über Networking-Events, Workshops und digitale Formate schaffen wir den Raum, in dem Wissen geteilt, Kontakte geknüpft und echte Partnerschaften entstehen. Heute ist Innovation Republic die erste Anlaufstelle für Innovationsverantwortliche, die Venture Clienting in ihren Unternehmen etablieren oder ausbauen möchten.`,
+Innovation Republic löst dieses Matching-Problem als gemeinnütziger Verein mit einer digitalen Plattform nach dem Prinzip „Problem sucht Lösung" statt klassischer Pitch-Events. Der gesamte Prozess – von der smarten Ideenformulierung bis zum Proof of Concept in 100 Werktagen – ist für Auftraggeber kostenfrei, vergaberechtskonform und KI-gestützt.
+
+Die Plattform funktioniert wie ein „InnovationOS mit App-Store": „Robert" unterstützt bei der Bedarfsformulierung, „Konrad" übernimmt das KI-kuratierte Scouting, „Ingo" bildet den einkaufskonformen Marktplatz, „James" begleitet als virtuelles PMO die PoC-Phase. Optional können über den Berater-Marktplatz „Roland" externe Experten zugebucht werden.
+
+Wirkprinzip: Statt Steuerausgaben → Steuereinnahmen. Statt Bürokratie → Umsetzung. Statt Anträgen → Aufträge.`,
     highlights: [
-      '500+ Mitglieder aus Corporates und Startups',
-      '12 Events pro Jahr in DACH',
-      'Exklusiver Wissenspool mit Case Studies',
-      'Direktes Matching über die Vencly-Plattform',
+      'Kostenfrei für Unternehmen & öffentliche Auftraggeber',
+      'PoC in 100 Werktagen – digital & vergaberechtskonform',
+      'KI-gestütztes Scouting & Matching (Robert, Konrad, Ingo)',
+      'Gemeinnütziger Verein (§ 52 AO) – transparente Mittelverwendung',
+      'Pilotregion München & Oberbayern – bundesweiter Rollout geplant',
     ],
     gradient: 'linear-gradient(135deg, #4F46E5, #7C3AED)',
     icon: '🏛️',
@@ -66,18 +72,18 @@ Das Modell wurde auf Tausenden von erfolgreichen Venture-Clienting-Projekten tra
     icon: '🤖',
   },
   {
-    slug: 'optainum',
-    title: 'OptAInum',
+    slug: 'optaimum',
+    title: 'OptAImum',
     subtitle: 'KI-Basiswissen gratis – für jeden zugänglich',
     tag: 'KI-Plattform',
     tagColor: '#8B5CF6',
     status: 'Live',
     statusColor: '#10B981',
     year: '2025',
-    description: `OptAInum macht KI-Grundwissen für alle zugänglich. Die kostenlose Plattform bietet strukturierte Lernpfade, praktische Übungen und aktuelle Use Cases – damit jeder die Grundlagen der künstlichen Intelligenz verstehen und anwenden kann.`,
-    longDesc: `OptAInum entstand aus der Überzeugung, dass KI-Kompetenz kein Privileg für Tech-Experten sein sollte. Die Plattform richtet sich an Einsteiger, Fachkräfte aus dem Mittelstand und Innovationsverantwortliche, die die Potenziale von KI in ihrem Alltag nutzen wollen.
+    description: `OptAImum macht KI-Grundwissen für alle zugänglich. Die kostenlose Plattform bietet strukturierte Lernpfade, praktische Übungen und aktuelle Use Cases – damit jeder die Grundlagen der künstlichen Intelligenz verstehen und anwenden kann.`,
+    longDesc: `OptAImum entstand aus der Überzeugung, dass KI-Kompetenz kein Privileg für Tech-Experten sein sollte. Die Plattform richtet sich an Einsteiger, Fachkräfte aus dem Mittelstand und Innovationsverantwortliche, die die Potenziale von KI in ihrem Alltag nutzen wollen.
 
-Das Curriculum umfasst interaktive Module zu den Grundlagen von KI und Machine Learning, praxisnahe Tutorials zu Prompt Engineering und generativer KI sowie branchenspezifische Use Cases, die direkt auf Unternehmensszenarien zugeschnitten sind. OptAInum ist nahtlos mit dem Vencly-Ökosystem verbunden und bereitet Nutzer optimal auf die Arbeit mit KI-Agenten vor.`,
+Das Curriculum umfasst interaktive Module zu den Grundlagen von KI und Machine Learning, praxisnahe Tutorials zu Prompt Engineering und generativer KI sowie branchenspezifische Use Cases, die direkt auf Unternehmensszenarien zugeschnitten sind. OptAImum ist nahtlos mit dem Vencly-Ökosystem verbunden und bereitet Nutzer optimal auf die Arbeit mit KI-Agenten vor.`,
     highlights: [
       'Kostenloser Zugang zu KI-Grundlagenwissen',
       'Interaktive Lernpfade für Einsteiger und Fortgeschrittene',

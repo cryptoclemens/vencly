@@ -36,7 +36,7 @@ export default function Nav() {
             <span className={styles.langDivider}>/</span>
             <span className={lang === 'en' ? styles.langActive : ''}>EN</span>
           </button>
-          <a href="https://www.optainum.com" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>{t.nav.login}</a>
+          <a href="https://www.optaimum.com" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>{t.nav.login}</a>
           <span className={styles.version}>v1.3</span>
           <a href="https://outlook.office.com/bookwithme/user/9c11749d74b349809103953c39ba26d4@vencly.com?anonymous&ep=pcard" target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
             <span>{t.nav.demo}</span>

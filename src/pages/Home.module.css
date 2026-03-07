@@ -18,22 +18,29 @@
   font-size: clamp(38px, 5.5vw, 72px);
   font-weight: 800; line-height: 1.1; letter-spacing: -2px;
   color: var(--clr-heading); max-width: 820px;
-  /* Fixed bounding box: label line + typewriter line = 2 × line-height em */
-  min-height: calc(1.1em * 2 + 1.25em);
 }
 
-/* ── TYPEWRITER: locked to exactly one line, no reflow ever ── */
-.typewriterRow {
-  display: block;
-  height: 1.25em;        /* exact, never changes */
-  line-height: 1.25;
-  overflow: hidden;      /* long phrases get clipped instead of wrapping */
-  white-space: nowrap;   /* THE key: no line-break = no height change = no jump */
+/* ── STATIC QUOTES under "Venture Clienting:" ── */
+.heroQuotes {
+  display: flex; flex-wrap: wrap; gap: 6px 0;
+  align-items: baseline;
+  max-width: 820px;
+  margin-top: -12px; /* close gap with the h1 */
+  line-height: 1.6;
 }
-
-.typedText { background: linear-gradient(135deg, #FF6B35, #6366F1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.cursor { display: inline-block; width: 3px; height: 0.8em; background: #FF6B35; margin-left: 3px; vertical-align: middle; animation: blink 0.75s step-end infinite; -webkit-text-fill-color: initial; }
-@keyframes blink { 50% { opacity: 0; } }
+.heroQuote {
+  font-size: clamp(13px, 1.35vw, 16px);
+  font-style: italic;
+  color: var(--clr-muted);
+  white-space: nowrap;
+  padding-right: 18px;
+  position: relative;
+}
+.heroQuote:not(:last-child)::after {
+  content: '·';
+  position: absolute; right: 6px;
+  font-style: normal; color: #d1d5db;
+}
 
 .heroSub { font-size: clamp(15px, 1.8vw, 18px); color: var(--clr-muted); max-width: 540px; line-height: 1.75; }
 .heroCtas { display: flex; gap: 14px; flex-wrap: wrap; }

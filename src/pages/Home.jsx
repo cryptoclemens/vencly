@@ -3,24 +3,8 @@ import { Link } from 'react-router-dom'
 import { useLang } from '../context/LanguageContext'
 import styles from './Home.module.css'
 
-const WORDS_DE = ['no Slides but Prototypes!','digitale Transformation!','Innovation auf Knopfdruck!','von Startups lernen!','Wachstum beschleunigen!','skalierbar & bezahlbar!','mit Startups wachsen!']
-const WORDS_EN = ['no Slides but Prototypes!','digital Transformation!','Innovation on Demand!','learn from Startups!','accelerate Growth!','scalable & affordable!','grow with Startups!']
-
-function TypeWriter({ lang }) {
-  const words = lang === 'de' ? WORDS_DE : WORDS_EN
-  const [idx, setIdx] = useState(0)
-  const [text, setText] = useState('')
-  const [deleting, setDeleting] = useState(false)
-  useEffect(() => { setIdx(0); setText(''); setDeleting(false) }, [lang])
-  useEffect(() => {
-    const target = words[idx]
-    if (!deleting && text === target) { const t = setTimeout(() => setDeleting(true), 1800); return () => clearTimeout(t) }
-    if (deleting && text === '') { setDeleting(false); setIdx(i => (i + 1) % words.length); return }
-    const t = setTimeout(() => setText(deleting ? text.slice(0,-1) : target.slice(0, text.length+1)), deleting ? 28 : 58)
-    return () => clearTimeout(t)
-  }, [text, deleting, idx, words])
-  return <span className={styles.typedText}>{text}<span className={styles.cursor} /></span>
-}
+const PHRASES_DE = ['„no Slides but Prototypes!"', '„Innovation auf Knopfdruck!"', '„skalierbar & bezahlbar!"', '„von Startups lernen!"', '„Wachstum beschleunigen!"', '„mit Startups wachsen!"']
+const PHRASES_EN = ['"no Slides but Prototypes!"', '"Innovation on Demand!"', '"scalable & affordable!"', '"learn from Startups!"', '"accelerate Growth!"', '"grow with Startups!"']
 
 function Counter({ to, suffix = '' }) {
   const [count, setCount] = useState(0); const ref = useRef()
@@ -108,11 +92,12 @@ export default function Home() {
         <div className={styles.grid} aria-hidden="true"/>
         <div className={`container ${styles.heroInner}`}>
           <div className={styles.heroBadge}><span className={styles.badgeDot}/>{t.hero.badge}</div>
-          <h1 className={styles.heroH1}>
-            {t.hero.label}
-            {/* Fixed-height typewriter row prevents layout shift */}
-            <span className={styles.typewriterRow}><TypeWriter lang={lang}/></span>
-          </h1>
+          <h1 className={styles.heroH1}>{t.hero.label}</h1>
+          <div className={styles.heroQuotes}>
+            {(lang === 'de' ? PHRASES_DE : PHRASES_EN).map((phrase, i) => (
+              <span key={i} className={styles.heroQuote}>{phrase}</span>
+            ))}
+          </div>
           <p className={styles.heroSub}>{t.hero.sub}</p>
           <div className={styles.heroCtas}>
             <a href="#demo" className={styles.ctaPrimary}>{t.hero.cta1}<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
@@ -233,10 +218,10 @@ export default function Home() {
               <span className={styles.teaserArrow}>→</span>
             </Link>
             <div className={styles.teaserSmall}>
-              <Link to="/projekte/optainum" className={styles.teaserCard}>
+              <Link to="/projekte/optaimum" className={styles.teaserCard}>
                 <div className={styles.teaserCardGlow} style={{'--tc':'#8B5CF6'}}/>
                 <span className={styles.teaserTag}>{lang==='de'?'KI-Plattform':'AI Platform'}</span>
-                <h3>OptAInum</h3>
+                <h3>OptAImum</h3>
                 <p>{lang==='de'?'Kostenloser Zugang zu KI-Grundlagenwissen für alle.':'Free access to AI basics for everyone.'}</p>
                 <span className={styles.teaserArrow}>→</span>
               </Link>

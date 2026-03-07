@@ -37,7 +37,7 @@ export default function Footer() {
             <div className={styles.linkGroup}>
               <h4>Projekte</h4>
               <Link to="/projekte/innovation-republic">Innovation Republic</Link>
-              <Link to="/projekte/optainum">OptAInum</Link>
+              <Link to="/projekte/optaimum">OptAImum</Link>
               <Link to="/projekte/venture-scout">Venture Scout</Link>
               <Link to="/projekte/ki-matchmaker">KI Matchmaker</Link>
             </div>
